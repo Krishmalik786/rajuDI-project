@@ -1,0 +1,32 @@
+name: Simple CI
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+    
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt
+    
+    - name: Run pipeline
+      run: |
+        python src/download_data.py
+        python src/preprocess.py
+        echo "✅ Pipeline executed successfully"
+    
+    - name: Build Docker
+      run: |
+        docker build -f docker/Dockerfile -t mlops-api:latest .
+        echo "✅ Docker build successful"
