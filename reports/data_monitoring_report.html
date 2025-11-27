@@ -1,0 +1,43 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Model Monitoring Report</title>
+        <style>
+            body { font-family: Arial; margin: 40px; }
+            h1 { color: #2c3e50; }
+            .metric { background: #ecf0f1; padding: 15px; margin: 10px 0; border-radius: 5px; }
+            .good { color: #27ae60; }
+            .warning { color: #e74c3c; }
+        </style>
+    </head>
+    <body>
+        <h1>📊 Model Monitoring Report</h1>
+        <p>Generated: 2025-11-27 19:10:44</p>
+        
+        <div class="metric">
+            <h2>Dataset Summary</h2>
+            <p>Training samples: 455</p>
+            <p>Test samples: 114</p>
+            <p>Features: 30</p>
+        </div>
+        
+        <div class="metric">
+            <h2>Data Drift Analysis</h2>
+            <p>Features with drift: <strong class="good">0</strong> / 30</p>
+            <p class="good">✅ No significant drift detected</p>
+        </div>
+        
+        <div class="metric">
+            <h2>Target Distribution</h2>
+            <p>Train - Class 0: 170 | Class 1: 285</p>
+            <p>Test - Class 0: 42 | Class 1: 72</p>
+        </div>
+        
+        <div class="metric">
+            <h2>Recommendations</h2>
+            <p class="good">✅ Model performance should be stable</p>
+        </div>
+    </body>
+    </html>
+    
