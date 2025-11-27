@@ -1,11 +1,30 @@
-data/raw/*
-data/processed/*
-*.csv
+# Data files (CSV data itself, not .dvc pointers)
+data/raw/*.csv
+data/processed/*.csv
+
+# Model files
 *.pkl
+
+# Python artifacts
 *.pyc
 __pycache__/
 .ipynb_checkpoints/
+
+# ML experiment tracking
 mlruns/
 .prefect/
+
+# Virtual environment
 venv/
 .env
+
+# Anaconda
+anaconda_projects/
+
+# Jupyter in root
+/*.ipynb
+
+# BUT ALLOW .dvc files (important!)
+!*.dvc
+!/data/**/.gitignore
+
