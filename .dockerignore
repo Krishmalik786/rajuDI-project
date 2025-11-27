@@ -1,0 +1,53 @@
+# Virtual environments
+venv/
+env/
+ENV/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Data files (large)
+data/raw/*.csv
+data/processed/*.csv
+
+# Git
+.git/
+.gitignore
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+
+# MLflow runs (can be large)
+mlruns/
+
+# DVC cache
+.dvc/cache/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Anaconda
+anaconda_projects/
+
+# Docker itself
+Dockerfile
+docker-compose.yml
+
+# Documentation
+*.md
