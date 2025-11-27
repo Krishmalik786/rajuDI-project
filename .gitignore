@@ -1,0 +1,11 @@
+data/raw/*
+data/processed/*
+*.csv
+*.pkl
+*.pyc
+__pycache__/
+.ipynb_checkpoints/
+mlruns/
+.prefect/
+venv/
+.env
